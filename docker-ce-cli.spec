@@ -40,7 +40,7 @@ DISABLE_WARN_OUTSIDE_CONTAINER=1 \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libexecdir}/docker/cli-plugins}
 
 # docker-cli
 install -p build/docker $RPM_BUILD_ROOT%{_bindir}/docker
@@ -58,5 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/docker
+%dir %{_libexecdir}/docker
+%dir %{_libexecdir}/docker/cli-plugins
 %{bash_compdir}/docker
 %{zsh_compdir}/_docker
