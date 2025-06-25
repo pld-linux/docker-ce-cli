@@ -1,11 +1,11 @@
 Summary:	The Docker CLI
 Name:		docker-ce-cli
-Version:	28.0.1
+Version:	28.3.0
 Release:	1
 License:	Apache v2.0
 Group:		Applications/System
 Source0:	https://github.com/docker/cli/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	931f32ae5b5525e4aae1a12a6dc9af87
+# Source0-md5:	58d2c82d68e3318659b557b38e8d8996
 URL:		https://www.docker.com/
 BuildRequires:	golang >= 1.12
 BuildRequires:	rpmbuild(macros) >= 2.009
